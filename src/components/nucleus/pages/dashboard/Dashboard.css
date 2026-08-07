@@ -1,0 +1,28 @@
+/* Take full screen */
+.header-page {
+  min-height: calc(100vh - 72px); /* 72px = header height */
+  background-color: #0f0f0f;
+  color: #ffffff;
+
+  padding: 32px;
+}
+
+/* Optional content container */
+.header-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Example page title */
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Example content area */
+.page-content {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
