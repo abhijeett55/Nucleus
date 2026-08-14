@@ -1,0 +1,104 @@
+.testimonials {
+  width: 100%;
+  overflow: hidden;
+  background: #0d0d0d;
+  padding: 40px 0 80px;
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 38px;
+
+  width: max-content;
+
+  animation: testimonial-scroll 35s linear infinite;
+}
+
+.testimonial-card {
+  width: 590px;
+  height: 380px;
+
+  flex-shrink: 0;
+
+  background: #d8ff32;
+
+  border-radius: 12px;
+
+  padding: 70px 95px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+.testimonial-quote {
+  margin: 0;
+
+  font-size: 28px;
+  line-height: 1.35;
+  font-weight: 500;
+
+  color: #111111;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+.testimonial-name {
+  font-size: 19px;
+  font-weight: 500;
+
+  color: #111111;
+}
+
+.testimonial-role {
+  margin-top: 3px;
+
+  font-size: 18px;
+
+  color: #71862c;
+}
+
+/* Continuous left → right movement */
+
+@keyframes testimonial-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause when mouse is over cards */
+
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .testimonial-card {
+    width: 340px;
+    height: 330px;
+
+    padding: 40px;
+  }
+
+  .testimonial-quote {
+    font-size: 21px;
+  }
+
+  .testimonial-role {
+    font-size: 14px;
+  }
+}

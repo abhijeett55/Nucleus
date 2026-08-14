@@ -1,0 +1,339 @@
+/* ============================================================
+HOME PAGE — RESET & BASE
+============================================================ */
+
+.home {
+width: 100%;
+min-height: 100vh;
+background: #0d0d0d;
+color: #fff;
+font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+Roboto, sans-serif;
+display: flex;
+flex-direction: column;
+}
+
+/* ============================================================
+HOME BODY
+============================================================ */
+
+.home-body {
+width: 100%;
+min-height: calc(100vh - 72px);
+display: flex;
+background: #0d0d0d;
+}
+
+/* ============================================================
+SIDEBAR AREA
+============================================================ */
+
+.home-body > :first-child {
+flex-shrink: 0;
+}
+
+/* ============================================================
+MAIN CONTENT
+============================================================ */
+
+.main-content {
+flex: 1;
+min-width: 0;
+min-height: calc(100vh - 72px);
+
+padding: 36px 40px;
+
+background: #0d0d0d;
+
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+/* ============================================================
+CONTENT CARD
+============================================================ */
+
+.content-card {
+width: 100%;
+max-width: 1100px;
+
+margin: 0 auto;
+
+background: #151515;
+
+border: 1px solid #2a2a2a;
+border-radius: 12px;
+
+padding: 36px;
+
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+
+transition:
+border-color 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.content-card:hover {
+border-color: #363636;
+box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* ============================================================
+HEADINGS
+============================================================ */
+
+.content-card h2 {
+margin: 0 0 12px;
+
+color: #fff;
+
+font-size: 24px;
+line-height: 1.25;
+
+font-weight: 600;
+letter-spacing: -0.4px;
+}
+
+.content-card p {
+margin: 0;
+
+color: #9d9d9d;
+
+font-size: 15px;
+line-height: 1.7;
+
+font-weight: 400;
+}
+
+/* ============================================================
+ACTION BUTTONS
+============================================================ */
+
+.action-buttons {
+display: flex;
+align-items: center;
+gap: 12px;
+
+margin-top: 28px;
+}
+
+/* Primary */
+
+.primary-btn {
+padding: 10px 20px;
+
+background: #fff;
+color: #0d0d0d;
+
+border: 1px solid #fff;
+border-radius: 8px;
+
+font-family: inherit;
+font-size: 14px;
+font-weight: 500;
+
+cursor: pointer;
+
+transition:
+background 0.25s ease,
+transform 0.15s ease,
+box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+background: #e8e8e8;
+
+transform: translateY(-1px);
+
+box-shadow: 0 4px 14px rgba(255, 255, 255, 0.08);
+}
+
+.primary-btn:active {
+transform: translateY(0);
+}
+
+/* Secondary */
+
+.secondary-btn {
+padding: 10px 20px;
+
+background: transparent;
+color: #cfcfcf;
+
+border: 1px solid #3a3a3a;
+border-radius: 8px;
+
+font-family: inherit;
+font-size: 14px;
+font-weight: 500;
+
+cursor: pointer;
+
+transition:
+background 0.25s ease,
+color 0.25s ease,
+border-color 0.25s ease,
+transform 0.15s ease;
+}
+
+.secondary-btn:hover {
+background: #2a2a2a;
+color: #fff;
+border-color: #555;
+
+transform: translateY(-1px);
+}
+
+.secondary-btn:active {
+transform: translateY(0);
+}
+
+/* ============================================================
+FOCUS STATES
+============================================================ */
+
+.primary-btn:focus-visible,
+.secondary-btn:focus-visible {
+outline: 2px solid #fff;
+outline-offset: 2px;
+}
+
+/* ============================================================
+RESPONSIVE — TABLETS & SMALLER LAPTOPS
+============================================================ */
+
+@media (max-width: 1024px) {
+.main-content {
+padding: 30px 28px;
+}
+
+.content-card {
+padding: 30px;
+}
+
+.content-card h2 {
+font-size: 22px;
+}
+
+.content-card p {
+font-size: 14px;
+}
+}
+
+/* ============================================================
+RESPONSIVE — MOBILE
+============================================================ */
+
+@media (max-width: 860px) {
+.home-body {
+min-height: calc(100vh - 64px);
+}
+
+.main-content {
+width: 100%;
+min-height: calc(100vh - 64px);
+
+```
+padding: 24px 18px;
+```
+
+}
+
+.content-card {
+max-width: none;
+
+```
+padding: 26px 22px;
+
+border-radius: 10px;
+```
+
+}
+
+.content-card h2 {
+font-size: 21px;
+}
+
+.content-card p {
+font-size: 14px;
+line-height: 1.6;
+}
+
+.action-buttons {
+gap: 10px;
+margin-top: 24px;
+}
+
+.primary-btn,
+.secondary-btn {
+padding: 10px 16px;
+font-size: 14px;
+}
+}
+
+/* ============================================================
+RESPONSIVE — VERY SMALL PHONES
+============================================================ */
+
+@media (max-width: 420px) {
+.home-body {
+min-height: calc(100vh - 58px);
+}
+
+.main-content {
+min-height: calc(100vh - 58px);
+
+```
+padding: 18px 12px;
+```
+
+}
+
+.content-card {
+padding: 22px 18px;
+
+```
+border-radius: 8px;
+```
+
+}
+
+.content-card h2 {
+font-size: 19px;
+letter-spacing: -0.2px;
+}
+
+.content-card p {
+font-size: 13px;
+}
+
+.action-buttons {
+width: 100%;
+
+```
+flex-direction: column;
+align-items: stretch;
+
+margin-top: 20px;
+```
+
+}
+
+.primary-btn,
+.secondary-btn {
+width: 100%;
+padding: 11px 16px;
+}
+}
+
+/* ============================================================
+ACCESSIBILITY
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+.content-card,
+.primary-btn,
+.secondary-btn {
+transition: none;
+}
+}

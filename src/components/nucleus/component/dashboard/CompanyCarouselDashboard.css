@@ -1,0 +1,40 @@
+.company-carousel {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 35px 0;
+}
+
+.company-carousel-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: company-scroll 25s linear infinite;
+}
+
+.company-logo {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: #111;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.company-logo img {
+  width: 42px;
+  height: 42px;
+}
+
+@keyframes company-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

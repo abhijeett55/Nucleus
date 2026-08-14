@@ -1,0 +1,336 @@
+.upgrade-page {
+  min-height: 100vh;
+  background: var(--auth-bg, #0f1115);
+  color: var(--auth-text, #e8eaee);
+  padding: 32px 40px 80px;
+  box-sizing: border-box;
+}
+
+.upgrade-cancel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #1f2330;
+  color: var(--auth-text, #e8eaee);
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+.upgrade-cancel:hover {
+  background: #262b3a;
+}
+
+.upgrade-heading {
+  margin-bottom: 32px;
+}
+
+.upgrade-step {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--auth-text-muted, #9aa1ad);
+  margin-bottom: 8px;
+}
+
+.upgrade-heading h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.upgrade-subtitle {
+  color: var(--auth-text-muted, #9aa1ad);
+  margin: 0;
+}
+
+.upgrade-subtitle strong {
+  color: var(--auth-text, #e8eaee);
+}
+
+/* Toggle */
+.upgrade-toggle {
+  display: inline-flex;
+  background: #1f2330;
+  border-radius: 999px;
+  padding: 4px;
+  margin: 0 auto 32px;
+  gap: 4px;
+}
+
+.upgrade-toggle-btn {
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--auth-text-muted, #9aa1ad);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.upgrade-toggle-btn.active {
+  background: var(--auth-accent, #6c8cff);
+  color: #fff;
+}
+
+/* Plan cards */
+.upgrade-plans-grid {
+  display: grid;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.upgrade-plans-grid.plans-2 {
+  grid-template-columns: repeat(2, minmax(260px, 340px));
+  justify-content: center;
+}
+
+.upgrade-plans-grid.plans-3 {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+.plan-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #171a21;
+  border: 1px solid var(--auth-border, #2a2e38);
+}
+
+.plan-card-bar {
+  height: 8px;
+  background: #2a2e38;
+}
+
+.bar-pro,
+.bar-scale {
+  background: var(--auth-accent, #6c8cff);
+}
+
+.bar-enterprise {
+  background: #d4f26a;
+}
+
+.plan-card-body {
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.plan-card-body h2 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.plan-description {
+  color: var(--auth-text-muted, #9aa1ad);
+  font-size: 0.88rem;
+  min-height: 40px;
+  margin: 0 0 20px;
+}
+
+.plan-price-block {
+  margin-bottom: 20px;
+}
+
+.plan-price-from {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--auth-text-muted, #9aa1ad);
+}
+
+.plan-price {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.plan-price-suffix {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: var(--auth-text-muted, #9aa1ad);
+  margin-top: 4px;
+}
+
+.plan-cta {
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.plan-cta-neutral {
+  background: #2a2e38;
+  color: var(--auth-text, #e8eaee);
+}
+
+.plan-cta-neutral:hover {
+  background: #333846;
+}
+
+.plan-cta-accent {
+  background: var(--auth-accent, #6c8cff);
+  color: #fff;
+}
+
+.plan-cta-accent:hover {
+  background: var(--auth-accent-hover, #5678e6);
+}
+
+.plan-cta-highlight {
+  background: #d4f26a;
+  color: #14170f;
+}
+
+.plan-cta-highlight:hover {
+  background: #c3e04f;
+}
+
+.plan-usage {
+  text-align: left;
+  border-top: 1px solid var(--auth-border, #2a2e38);
+  padding-top: 16px;
+}
+
+.plan-usage-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--auth-text-muted, #9aa1ad);
+  margin-bottom: 10px;
+}
+
+.plan-usage-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.plan-usage-row i {
+  color: var(--auth-accent, #6c8cff);
+  margin-top: 3px;
+  font-size: 0.75rem;
+}
+
+/* Discount banner */
+.upgrade-discount-banner {
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #171a21;
+  border: 1px solid var(--auth-border, #2a2e38);
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+
+.upgrade-discount-banner h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.upgrade-discount-banner p {
+  margin: 0;
+  color: var(--auth-text-muted, #9aa1ad);
+  font-size: 0.88rem;
+  max-width: 640px;
+}
+
+.upgrade-learn-more {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #d4f26a;
+  color: #14170f;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.upgrade-learn-more:hover {
+  background: #c3e04f;
+}
+
+/* Plan details table */
+.plan-details {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.plan-details h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.plan-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.plan-details-table th {
+  text-align: center;
+  padding: 12px;
+  font-size: 0.95rem;
+  color: var(--auth-text, #e8eaee);
+  border-bottom: 1px solid var(--auth-border, #2a2e38);
+}
+
+.plan-details-table td {
+  text-align: center;
+  padding: 14px 12px;
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--auth-border, #2a2e38);
+  color: var(--auth-text, #e8eaee);
+}
+
+.plan-details-label {
+  text-align: left !important;
+  color: var(--auth-text, #e8eaee);
+  font-weight: 500;
+}
+
+.plan-details-section-row td {
+  text-align: left;
+  font-weight: 600;
+  color: var(--auth-text-muted, #9aa1ad);
+  padding-top: 24px;
+  border-bottom: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.plan-details-check {
+  color: #4caf7d;
+}
+
+@media (max-width: 860px) {
+  .upgrade-plans-grid.plans-2,
+  .upgrade-plans-grid.plans-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .upgrade-discount-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .plan-details-table {
+    font-size: 0.8rem;
+  }
+}
