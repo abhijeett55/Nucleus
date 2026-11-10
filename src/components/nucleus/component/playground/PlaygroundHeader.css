@@ -1,0 +1,258 @@
+/* PlaygroundHeader.css */
+
+.playground-header-container {
+  height: 56px;
+  background-color: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  z-index: 20;
+}
+
+/* Left Section */
+.header-left-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 8px;
+}
+
+.header-logo-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #58a6ff, #bc8cff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(88, 166, 255, 0.25);
+}
+
+.header-brand-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-brand-badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: rgba(88, 166, 255, 0.15);
+  color: #58a6ff;
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header-divider {
+  height: 20px;
+  width: 1px;
+  background-color: #30363d;
+}
+
+@media (max-width: 768px) {
+  .header-divider {
+    display: none;
+  }
+}
+
+.header-filename-tag {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  font-size: 12px;
+  font-family: 'Fira Code', monospace;
+  color: #c9d1d9;
+}
+
+@media (min-width: 1024px) {
+  .header-filename-tag {
+    display: flex;
+  }
+}
+
+.header-icon-btn {
+  padding: 6px;
+  border-radius: 8px;
+  color: #8b949e;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.header-icon-btn:hover {
+  color: #ffffff;
+  background-color: #21262d;
+  border-color: #30363d;
+}
+
+/* Right Section */
+.header-right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Settings Modal */
+.settings-menu-wrapper {
+  position: relative;
+}
+
+.settings-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 250px;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-menu-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e6edf3;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #30363d;
+}
+
+.settings-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.settings-item-label {
+  color: #8b949e;
+}
+
+.settings-select-input {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  font-size: 12px;
+  outline: none;
+}
+
+.settings-select-input:focus {
+  border-color: #58a6ff;
+}
+
+.settings-checkbox {
+  accent-color: #58a6ff;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Action Buttons */
+.btn-run-code {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background-color: #238636;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease;
+}
+
+.btn-run-code:hover:not(:disabled) {
+  background-color: #2ea043;
+}
+
+.btn-run-code:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-keyboard-shortcut {
+  font-size: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #e6edf3;
+  font-family: monospace;
+}
+
+@media (max-width: 640px) {
+  .btn-keyboard-shortcut {
+    display: none;
+  }
+}
+
+.btn-test-cases {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background-color: #58a6ff;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease;
+}
+
+.btn-test-cases:hover:not(:disabled) {
+  background-color: #79b8ff;
+}
+
+.btn-test-cases:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ffffff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: header-spin 0.8s linear infinite;
+}
+
+@keyframes header-spin {
+  to { transform: rotate(360deg); }
+}

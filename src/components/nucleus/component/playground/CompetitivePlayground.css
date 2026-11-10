@@ -1,0 +1,62 @@
+/* CompetitivePlayground.css */
+
+.competitive-playground-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0d1117;
+  overflow: hidden;
+  user-select: none;
+}
+
+.playground-workspace {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.playground-editor-pane {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.playground-splitter-bar {
+  height: 6px;
+  width: 100%;
+  background-color: #161b22;
+  border-top: 1px solid #30363d;
+  border-bottom: 1px solid #30363d;
+  cursor: row-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease;
+  z-index: 10;
+  user-select: none;
+}
+
+.playground-splitter-bar:hover {
+  background-color: #58a6ff;
+}
+
+.playground-splitter-handle {
+  width: 32px;
+  height: 2px;
+  background-color: #484f58;
+  border-radius: 9999px;
+  transition: background-color 0.15s ease;
+}
+
+.playground-splitter-bar:hover .playground-splitter-handle {
+  background-color: #ffffff;
+}
+
+.playground-console-pane {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}

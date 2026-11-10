@@ -1,0 +1,252 @@
+/* TestCaseManager.css */
+
+.testcase-manager-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #0d1117;
+  color: #e6edf3;
+  user-select: text;
+}
+
+/* Tabs Bar */
+.testcase-tabs-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: rgba(22, 27, 34, 0.5);
+  border-bottom: 1px solid #30363d;
+  overflow-x: auto;
+  scrollbar-width: none;
+  user-select: none;
+}
+
+.testcase-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.testcase-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8b949e;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.testcase-tab-btn:hover {
+  color: #e6edf3;
+  background-color: #1f242c;
+}
+
+.testcase-tab-btn.active {
+  color: #ffffff;
+  background-color: #21262d;
+  border-color: rgba(88, 166, 255, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.testcase-delete-icon {
+  opacity: 0;
+  padding: 2px;
+  border-radius: 4px;
+  color: #8b949e;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.testcase-tab-btn:hover .testcase-delete-icon {
+  opacity: 1;
+}
+
+.testcase-delete-icon:hover {
+  color: #f85149;
+}
+
+.testcase-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8b949e;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.testcase-add-btn:hover {
+  color: #58a6ff;
+  background-color: #21262d;
+}
+
+/* Overall Status Badge */
+.testcase-summary-badge {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+}
+
+.summary-accepted {
+  background-color: rgba(46, 160, 67, 0.2);
+  color: #3fb950;
+  border: 1px solid rgba(46, 160, 67, 0.3);
+}
+
+.summary-failed {
+  background-color: rgba(248, 81, 73, 0.2);
+  color: #f85149;
+  border: 1px solid rgba(248, 81, 73, 0.3);
+}
+
+/* Details Editor */
+.testcase-body {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .testcase-body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.testcase-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.testcase-field-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8b949e;
+}
+
+.testcase-textarea {
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  font-family: 'Fira Code', monospace;
+  border-radius: 8px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  resize: none;
+  outline: none;
+  min-height: 80px;
+}
+
+.testcase-textarea:focus {
+  border-color: #58a6ff;
+}
+
+.testcase-textarea::placeholder {
+  color: #6e7681;
+}
+
+/* Result Box */
+.testcase-result-card {
+  grid-column: 1 / -1;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.testcase-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testcase-result-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.testcase-result-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+.testcase-result-pill {
+  font-size: 11px;
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.pill-pass {
+  background-color: rgba(46, 160, 67, 0.2);
+  color: #3fb950;
+}
+
+.pill-fail {
+  background-color: rgba(248, 81, 73, 0.2);
+  color: #f85149;
+}
+
+.testcase-result-metrics {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-family: 'Fira Code', monospace;
+  color: #8b949e;
+}
+
+.testcase-metric-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.testcase-output-pre {
+  padding: 10px;
+  font-size: 12px;
+  font-family: 'Fira Code', monospace;
+  border-radius: 6px;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}
+
+.testcase-error-box {
+  padding: 8px 10px;
+  font-size: 12px;
+  font-family: 'Fira Code', monospace;
+  border-radius: 6px;
+  background-color: rgba(248, 81, 73, 0.1);
+  border: 1px solid rgba(248, 81, 73, 0.3);
+  color: #f85149;
+}

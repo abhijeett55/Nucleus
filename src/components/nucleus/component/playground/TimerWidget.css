@@ -1,0 +1,141 @@
+/* TimerWidget.css */
+
+.timer-widget-wrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+
+/* Trigger Button */
+.timer-trigger-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  font-size: 12px;
+  font-family: 'Fira Code', monospace;
+  color: #c9d1d9;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.timer-trigger-btn:hover {
+  background-color: #21262d;
+  border-color: #484f58;
+}
+
+.timer-icon-idle {
+  color: #8b949e;
+}
+
+.timer-icon-running {
+  color: #3fb950;
+  animation: timer-pulse 1.5s infinite;
+}
+
+@keyframes timer-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.1); }
+}
+
+.timer-display-text {
+  font-weight: 600;
+  color: #f0f6fc;
+}
+
+/* Popover Modal */
+.timer-popover-card {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 190px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-popover-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
+
+.timer-digits-large {
+  font-size: 24px;
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.timer-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.btn-timer-toggle {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn-timer-start {
+  background-color: #238636;
+}
+
+.btn-timer-start:hover {
+  background-color: #2ea043;
+}
+
+.btn-timer-pause {
+  background-color: #d29922;
+}
+
+.btn-timer-pause:hover {
+  background-color: #bb8009;
+}
+
+.btn-timer-reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-timer-reset:hover {
+  background-color: #30363d;
+  color: #ffffff;
+}

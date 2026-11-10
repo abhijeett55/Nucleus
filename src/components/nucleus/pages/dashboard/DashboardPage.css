@@ -1,0 +1,27 @@
+/* Dashboard page */
+.header-page {
+  min-height: 400px;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  padding: 32px;
+}
+
+/* Dashboard content container */
+.header-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Dashboard title */
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Dashboard content */
+.page-content {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}

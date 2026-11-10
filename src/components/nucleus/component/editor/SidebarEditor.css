@@ -1,0 +1,119 @@
+.sidebar-editor-activitybar {
+  width: 48px;
+  background: #181818;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  border-right: 1px solid #2b2b2b;
+}
+
+.sidebar-editor-menu-btn {
+  width: 48px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: #cccccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-editor-activitybar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-editor-activitybar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  padding-bottom: 8px;
+}
+
+.sidebar-editor-activity-icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  color: #858585;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-editor-activity-icon:hover {
+  color: #ffffff;
+}
+
+.sidebar-editor-activity-icon.active {
+  color: #ffffff;
+  box-shadow: inset 2px 0 0 #ffffff;
+}
+
+.sidebar-editor-activity-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: #8bc34a;
+  color: #14170f;
+  font-size: 0.6rem;
+  font-weight: 700;
+  min-width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+.sidebar-editor-explorer {
+  width: 260px;
+  background: #181818;
+  border-right: 1px solid #2b2b2b;
+  flex-shrink: 0;
+  overflow-y: auto;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+}
+
+.sidebar-editor-explorer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #cccccc;
+}
+
+.sidebar-editor-explorer-tree {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-editor-tree-section-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 7px 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #232323;
+  color: #cccccc;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar-editor-tree-section-label:hover {
+  background: #2a2d2e;
+}

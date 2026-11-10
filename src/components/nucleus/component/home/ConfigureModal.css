@@ -1,0 +1,191 @@
+.cm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.cm-modal {
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  width: 900px;
+  max-width: 92vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 28px 32px 0;
+}
+
+.cm-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #9a9a9a;
+  font-size: 16px;
+  cursor: pointer;
+}
+.cm-close:hover { color: #fff; }
+
+.cm-body {
+  display: flex;
+  gap: 40px;
+}
+
+.cm-left {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.cm-back {
+  background: none;
+  border: none;
+  color: #9a9a9a;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 0;
+}
+.cm-back:hover { color: #fff; }
+
+
+
+.cm-icon { font-size: 28px; color: #61dafb; margin-bottom: 12px; }
+.cm-icon img { width: 32px; height: 32px; }
+
+.cm-name { color: #fff; font-size: 18px; margin: 0 0 2px; }
+.cm-author { color: #8a8a8a; font-size: 13px; margin: 0 0 12px; }
+.cm-right { flex: 1; min-width: 0; }
+.cm-right h2 { color: #fff; font-size: 20px; margin: 0 0 20px; }
+
+.cm-label {
+  display: block;
+  color: #d0d0d0;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin: 16px 0 6px;
+}
+.cm-right .cm-label:first-of-type { margin-top: 0; }
+
+.cm-input,
+.cm-field select,
+.cm-right > select {
+  width: 100%;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  padding: 10px 12px;
+  font-size: 13.5px;
+}
+.cm-input:focus,
+.cm-field select:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+
+.cm-row {
+  display: flex;
+  gap: 16px;
+}
+.cm-field { flex: 1; }
+
+.cm-runtime-row {
+  display: flex;
+  gap: 12px;
+}
+
+.cm-runtime-card {
+  flex: 1;
+  text-align: left;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  color: #b5b5b5;
+}
+.cm-runtime-card.active { border-color: #7c7cff; box-shadow: 0 0 0 1px #7c7cff; }
+.cm-runtime-card.disabled { opacity: 0.5; cursor: not-allowed; }
+.cm-runtime-card p { font-size: 12.5px; margin: 6px 0 0; line-height: 1.4; }
+.cm-runtime-title { color: #fff; font-weight: 600; font-size: 14px; }
+.cm-runtime-title i { margin-right: 6px; }
+.cm-warn { color: #e6a23c !important; margin-top: 6px !important; }
+
+.cm-footer {
+  position: sticky;
+  bottom: 0;
+  background: #141414;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: 24px;
+  border-top: 1px solid #262626;
+}
+
+.cm-user-btn {
+  background: none;
+  border: none;
+  color: #b5b5b5;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.cm-user-btn i { margin-left: 6px; font-size: 11px; }
+
+.cm-footer-actions { display: flex; gap: 10px; }
+
+.cm-btn-secondary,
+.cm-btn-primary {
+  border: none;
+  border-radius: 6px;
+  padding: 9px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cm-btn-secondary { background: #2a2a2a; color: #fff; }
+.cm-btn-secondary:hover { background: #333; }
+.cm-btn-primary { background: #c6f135; color: #111; }
+.cm-btn-primary:hover { background: #d4ff45; }
+
+
+
+.cm-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+
+.cm-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.cm-category-pill {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #b5b5b5;
+  font-size: 11.5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.cm-price {
+  color: #c6f135;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin: 0;
+}
